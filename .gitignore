@@ -11,6 +11,7 @@
 /build
 
 # misc
+/frontend/.env
 .env
 .DS_Store
 .env.local

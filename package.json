@@ -1,8 +1,12 @@
 {
-  "name": "sem3_WT",
-  "version": "1.0.0",
-  "main": "index.js",
-  "repository": "git@github.com:ThejasNU/ecommerce-website.git",
-  "author": "ThejasNU <thejasnu@gmail.com>",
-  "license": "MIT"
+	"name": "sem3_WT",
+	"type": "module",
+	"version": "1.0.0",
+	"main": "index.js",
+	"repository": "git@github.com:ThejasNU/ecommerce-website.git",
+	"author": "ThejasNU <thejasnu@gmail.com>",
+	"license": "MIT",
+	"dependencies": {
+		"express": "^4.17.1"
+	}
 }
