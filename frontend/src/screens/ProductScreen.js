@@ -114,6 +114,9 @@ const ProductScreen = (props) => {
 										<button
 											className="primary block"
 											onClick={addToCartHandler}
+											disabled={
+												product.countInStock === 0
+											}
 										>
 											Add to Cart
 										</button>

@@ -12,6 +12,7 @@
 
 # misc
 /frontend/.env
+/backend/.env
 .env
 .DS_Store
 .env.local
