@@ -467,3 +467,10 @@ img.large {
 .support-users .unread {
 	background-color: #f02020;
 }
+
+#signin h1 {
+	text-align: center;
+}
+#signin .new-customer {
+	text-align: center;
+}
