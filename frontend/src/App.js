@@ -2,22 +2,25 @@ import React from "react";
 import { useDispatch, useSelector } from "react-redux";
 import { BrowserRouter, Link, Route } from "react-router-dom";
 import { signout } from "./actions/userActions";
+import ShippingAddressScreen from "./components/ShippingAddressScreen";
 import CartScreen from "./screens/CartScreen";
 import HomeScreen from "./screens/HomeScreen";
+import PaymentMethodScreen from "./screens/PaymentMethodScreen";
+import PlaceOrderScreen from "./screens/PlaceOrderScreen";
 import ProductScreen from "./screens/ProductScreen";
 import RegisterScreen from "./screens/RegisterScreen";
 import SigninScreen from "./screens/SigninScreen";
 
-function App() {
+function App(props) {
 	const cart = useSelector((state) => state.cart);
-	const { cartItems } = cart;
-
+	let { cartItems } = cart;
 	const userSignin = useSelector((state) => state.userSignin);
 	const { userInfo } = userSignin;
 	const dispatch = useDispatch();
 	const signoutHandler = () => {
 		dispatch(signout());
 	};
+
 	return (
 		<BrowserRouter>
 			<div className="grid-container">
@@ -66,6 +69,18 @@ function App() {
 					></Route>
 					<Route path="/signin" component={SigninScreen}></Route>
 					<Route path="/register" component={RegisterScreen}></Route>
+					<Route
+						path="/shipping"
+						component={ShippingAddressScreen}
+					></Route>
+					<Route
+						path="/payment"
+						component={PaymentMethodScreen}
+					></Route>
+					<Route
+						path="/placeorder"
+						component={PlaceOrderScreen}
+					></Route>
 					<Route exact path="/" component={HomeScreen}></Route>
 				</main>
 				<footer className="row center">All right reserved</footer>

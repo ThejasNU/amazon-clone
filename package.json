@@ -12,6 +12,7 @@
 		"express": "^4.17.1",
 		"express-async-handler": "^1.2.0",
 		"jsonwebtoken": "^8.5.1",
-		"mongoose": "^6.0.13"
+		"mongoose": "^6.0.13",
+		"react-router": "5.2.0"
 	}
 }

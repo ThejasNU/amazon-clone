@@ -11,6 +11,7 @@ app.use(express.json());
 app.use(express.urlencoded({ extended: true }));
 
 const URL = process.env.MONGO;
+
 mongoose.connect(URL);
 
 app.use("/api/users", userRouter);
