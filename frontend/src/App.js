@@ -3,6 +3,7 @@ import { useDispatch, useSelector } from "react-redux";
 import { BrowserRouter, Link, Route } from "react-router-dom";
 import { signout } from "./actions/userActions";
 import ShippingAddressScreen from "./components/ShippingAddressScreen";
+import { CART_EMPTY } from "./constants/cartConstants";
 import CartScreen from "./screens/CartScreen";
 import HomeScreen from "./screens/HomeScreen";
 import PaymentMethodScreen from "./screens/PaymentMethodScreen";
@@ -19,6 +20,8 @@ function App(props) {
 	const dispatch = useDispatch();
 	const signoutHandler = () => {
 		dispatch(signout());
+		dispatch({ type: CART_EMPTY });
+		localStorage.removeItem("cartItems");
 	};
 
 	return (
@@ -83,7 +86,7 @@ function App(props) {
 					></Route>
 					<Route exact path="/" component={HomeScreen}></Route>
 				</main>
-				<footer className="row center">All right reserved</footer>
+				<footer className="row center">All rights reserved</footer>
 			</div>
 		</BrowserRouter>
 	);

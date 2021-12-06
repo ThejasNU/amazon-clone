@@ -3,6 +3,7 @@ import mongoose from "mongoose";
 import userRouter from "./routers/userRouter.js";
 import dotenv from "dotenv";
 import productRouter from "./routers/productRouter.js";
+import orderRouter from "./routers/orderRouter.js";
 
 dotenv.config();
 
@@ -18,6 +19,8 @@ app.use("/api/users", userRouter);
 
 app.use("/api/products", productRouter);
 
+app.use("/api/orders", orderRouter);
+
 app.get("/", (req, res) => {
 	res.send("Server is ready");
 });
@@ -28,5 +31,5 @@ app.use((err, req, res, next) => {
 
 const port = process.env.PORT || 1122;
 app.listen(port, () => {
-	console.log(`Serve at http://localhost:${port}`);
+	console.log(`Served at http://localhost:${port}`);
 });
