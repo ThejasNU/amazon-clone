@@ -11,7 +11,9 @@ const app = express();
 app.use(express.json());
 app.use(express.urlencoded({ extended: true }));
 
-const URL = process.env.MONGO;
+// const URL = process.env.MONGO;
+const URL =
+	"mongodb+srv://tnu:tnu2003@cluster0.4wwdy.mongodb.net/amazona?retryWrites=true&w=majority";
 
 mongoose.connect(URL);
 

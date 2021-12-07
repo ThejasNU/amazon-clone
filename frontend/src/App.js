@@ -2,7 +2,7 @@ import React from "react";
 import { useDispatch, useSelector } from "react-redux";
 import { BrowserRouter, Link, Route } from "react-router-dom";
 import { signout } from "./actions/userActions";
-import ShippingAddressScreen from "./components/ShippingAddressScreen";
+import ShippingAddressScreen from "./screens/ShippingAddressScreen";
 import { CART_EMPTY } from "./constants/cartConstants";
 import CartScreen from "./screens/CartScreen";
 import HomeScreen from "./screens/HomeScreen";
@@ -50,10 +50,7 @@ function App(props) {
 								</Link>
 								<ul className="dropdown-content">
 									<li>
-										<Link
-											to="#signout"
-											onClick={signoutHandler}
-										>
+										<Link to="/" onClick={signoutHandler}>
 											Sign Out
 										</Link>
 									</li>

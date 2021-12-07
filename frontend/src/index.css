@@ -307,3 +307,10 @@ img.large {
 .table button {
 	margin: 0 0.2rem;
 }
+
+#signin h1 {
+	text-align: center;
+}
+#signin .new-customer {
+	text-align: center;
+}
